@@ -2,8 +2,11 @@ package com.example.android.lab3albertsen;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +26,23 @@ public class MainActivity extends AppCompatActivity {
 
         list = findViewById(R.id.class_schedule);
         list.setAdapter(thing);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast toast = Toast.makeText(getApplicationContext(), "OnItemClick", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast toast = Toast.makeText(getApplicationContext(), "OnItemLongClick", Toast.LENGTH_SHORT);
+                toast.show();
+                return true;
+            }
+        });
 
     }
 }
