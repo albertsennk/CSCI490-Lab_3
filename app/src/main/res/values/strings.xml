@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Lab3 Albertsen</string>
+    <string-array name="schedule">
+        <item>Italian 313</item>
+        <item>User Interface Design</item>
+        <item>CITA Capstone</item>
+        <item>The Art of Translation</item>
+        <item>App Development</item>
+        <item>Macroeconomics</item>
+        <item>Cults and Conversion</item>
+        <item>Lithography</item>
+    </string-array>
 </resources>
